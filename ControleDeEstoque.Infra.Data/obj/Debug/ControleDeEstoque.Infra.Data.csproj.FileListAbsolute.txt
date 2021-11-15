@@ -1,0 +1,14 @@
+C:\Users\Sundays\source\repos\SaluRepresentacao\ControleDeEstoque.Infra.Data\bin\Debug\ControleDeEstoque.Infra.Data.dll.config
+C:\Users\Sundays\source\repos\SaluRepresentacao\ControleDeEstoque.Infra.Data\bin\Debug\ControleDeEstoque.Infra.Data.dll
+C:\Users\Sundays\source\repos\SaluRepresentacao\ControleDeEstoque.Infra.Data\bin\Debug\ControleDeEstoque.Infra.Data.pdb
+C:\Users\Sundays\source\repos\SaluRepresentacao\ControleDeEstoque.Infra.Data\bin\Debug\ControleDeEstoque.Domain.dll
+C:\Users\Sundays\source\repos\SaluRepresentacao\ControleDeEstoque.Infra.Data\bin\Debug\EntityFramework.dll
+C:\Users\Sundays\source\repos\SaluRepresentacao\ControleDeEstoque.Infra.Data\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Sundays\source\repos\SaluRepresentacao\ControleDeEstoque.Infra.Data\bin\Debug\ControleDeEstoque.Domain.pdb
+C:\Users\Sundays\source\repos\SaluRepresentacao\ControleDeEstoque.Infra.Data\bin\Debug\EntityFramework.xml
+C:\Users\Sundays\source\repos\SaluRepresentacao\ControleDeEstoque.Infra.Data\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Sundays\source\repos\SaluRepresentacao\ControleDeEstoque.Infra.Data\obj\Debug\ControleDeEstoque.Infra.Data.csproj.AssemblyReference.cache
+C:\Users\Sundays\source\repos\SaluRepresentacao\ControleDeEstoque.Infra.Data\obj\Debug\ControleDeEstoque.Infra.Data.csproj.CoreCompileInputs.cache
+C:\Users\Sundays\source\repos\SaluRepresentacao\ControleDeEstoque.Infra.Data\obj\Debug\ControleDeEstoque.Infra.Data.dll
+C:\Users\Sundays\source\repos\SaluRepresentacao\ControleDeEstoque.Infra.Data\obj\Debug\ControleDeEstoque.Infra.Data.pdb
+C:\Users\Sundays\source\repos\SaluRepresentacao\ControleDeEstoque.Infra.Data\obj\Debug\ControleDeEstoque.Infra.Data.csproj.CopyComplete
