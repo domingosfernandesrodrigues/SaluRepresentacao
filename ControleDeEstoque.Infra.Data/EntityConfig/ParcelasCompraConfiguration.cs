@@ -12,7 +12,7 @@ namespace ControleDeEstoque.Infra.Data.EntityConfig
     {
         public ParcelasCompraConfiguration()
         {
-            HasKey(p => p.ParcleasCompraId);
+            HasKey(p => p.ParcelasCompraId);
 
             HasRequired(p => p.Compra)
                 .WithMany()

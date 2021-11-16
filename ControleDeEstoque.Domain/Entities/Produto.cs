@@ -13,7 +13,7 @@ namespace ControleDeEstoque.Domain.Entities
         public string Descricao { get; set; }
         public string Foto { get; set; }
         public decimal ValorPago { get; set; }
-        public decimal valorVenda { get; set; }
+        public decimal ValorVenda { get; set; }
         public double Qtde { get; set; }
         public int UnidadeMedidaId { get; set; }
         public int CategoriaId { get; set; }

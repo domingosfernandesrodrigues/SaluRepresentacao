@@ -4,3 +4,9 @@ C:\Users\Sundays\source\repos\SaluRepresentacao\ControleDeEstoque.Application\ob
 C:\Users\Sundays\source\repos\SaluRepresentacao\ControleDeEstoque.Application\obj\Debug\ControleDeEstoque.Application.csproj.CoreCompileInputs.cache
 C:\Users\Sundays\source\repos\SaluRepresentacao\ControleDeEstoque.Application\obj\Debug\ControleDeEstoque.Application.dll
 C:\Users\Sundays\source\repos\SaluRepresentacao\ControleDeEstoque.Application\obj\Debug\ControleDeEstoque.Application.pdb
+C:\Users\Sundays\source\repos\SaluRepresentacao\SaluRepresentacao\ControleDeEstoque.Application\bin\Debug\ControleDeEstoque.Application.dll
+C:\Users\Sundays\source\repos\SaluRepresentacao\SaluRepresentacao\ControleDeEstoque.Application\bin\Debug\ControleDeEstoque.Application.pdb
+C:\Users\Sundays\source\repos\SaluRepresentacao\SaluRepresentacao\ControleDeEstoque.Application\obj\Debug\ControleDeEstoque.Application.csproj.AssemblyReference.cache
+C:\Users\Sundays\source\repos\SaluRepresentacao\SaluRepresentacao\ControleDeEstoque.Application\obj\Debug\ControleDeEstoque.Application.csproj.CoreCompileInputs.cache
+C:\Users\Sundays\source\repos\SaluRepresentacao\SaluRepresentacao\ControleDeEstoque.Application\obj\Debug\ControleDeEstoque.Application.dll
+C:\Users\Sundays\source\repos\SaluRepresentacao\SaluRepresentacao\ControleDeEstoque.Application\obj\Debug\ControleDeEstoque.Application.pdb
