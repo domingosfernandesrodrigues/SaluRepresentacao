@@ -1,0 +1,63 @@
+﻿@model IEnumerable<ControleDeEstoque.ViewModels.CompraViewModel>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.NotaFiscal)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TotalCompra)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NumeroParcela)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Status)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FornecedorId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TipoPagamentoId)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.NotaFiscal)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TotalCompra)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NumeroParcela)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Status)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FornecedorId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TipoPagamentoId)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.CompraId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.CompraId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.CompraId })
+        </td>
+    </tr>
+}
+
+</table>

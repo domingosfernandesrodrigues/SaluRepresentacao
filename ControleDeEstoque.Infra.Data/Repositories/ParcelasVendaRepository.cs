@@ -1,4 +1,5 @@
 ﻿using ControleDeEstoque.Domain.Entities;
+using ControleDeEstoque.Domain.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;

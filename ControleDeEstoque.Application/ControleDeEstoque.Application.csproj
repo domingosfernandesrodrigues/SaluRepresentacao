@@ -41,10 +41,41 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AppServiceBase.cs" />
+    <Compile Include="CategoriaAppService.cs" />
+    <Compile Include="ClienteAppService.cs" />
+    <Compile Include="CompraAppService.cs" />
+    <Compile Include="FornecedorAppService.cs" />
+    <Compile Include="Interface\IAppServiceBase.cs" />
+    <Compile Include="Interface\ICategoriaAppService.cs" />
+    <Compile Include="Interface\IClienteAppService.cs" />
+    <Compile Include="Interface\ICompraAppService.cs" />
+    <Compile Include="Interface\IFornecedorAppService.cs" />
+    <Compile Include="Interface\IItensCompraAppService.cs" />
+    <Compile Include="Interface\IItensVendaAppService.cs" />
+    <Compile Include="Interface\IParcelasVendaAppService.cs" />
+    <Compile Include="Interface\IParcelasCompraAppService.cs" />
+    <Compile Include="Interface\IProdutoAppService.cs" />
+    <Compile Include="Interface\ISubCategoriaAppService.cs" />
+    <Compile Include="Interface\ITipoPagamentoAppService.cs" />
+    <Compile Include="Interface\IUnidadeMedidaAppService.cs" />
+    <Compile Include="Interface\IVendaAppService.cs" />
+    <Compile Include="ItensCompraAppService.cs" />
+    <Compile Include="ItensVendaAppService.cs" />
+    <Compile Include="ParcelasVendaAppService.cs" />
+    <Compile Include="ParcelasCompraAppService.cs" />
+    <Compile Include="ProdutoAppService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SubCategoriaAppService.cs" />
+    <Compile Include="TipoPagamentoAppService.cs" />
+    <Compile Include="UnidadeMedidaAppService.cs" />
+    <Compile Include="VendaAppService.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Interface\" />
+    <ProjectReference Include="..\ControleDeEstoque.Domain\ControleDeEstoque.Domain.csproj">
+      <Project>{fa1b8166-8704-4710-9627-d810eecf2a96}</Project>
+      <Name>ControleDeEstoque.Domain</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

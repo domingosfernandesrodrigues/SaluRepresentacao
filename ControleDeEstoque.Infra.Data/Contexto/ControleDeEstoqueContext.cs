@@ -79,5 +79,6 @@ namespace ControleDeEstoque.Infra.Data.Contexto
             }
             return base.SaveChanges();
         }
+        
     }
 }
