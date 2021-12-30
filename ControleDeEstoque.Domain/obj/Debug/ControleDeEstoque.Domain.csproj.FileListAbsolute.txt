@@ -6,7 +6,6 @@ C:\Users\Sundays\source\repos\SaluRepresentacao\ControleDeEstoque.Domain\obj\Deb
 C:\Users\Sundays\source\repos\SaluRepresentacao\ControleDeEstoque.Domain\obj\Debug\ControleDeEstoque.Domain.csproj.AssemblyReference.cache
 C:\Users\Sundays\source\repos\SaluRepresentacao\SaluRepresentacao\ControleDeEstoque.Domain\bin\Debug\ControleDeEstoque.Domain.dll
 C:\Users\Sundays\source\repos\SaluRepresentacao\SaluRepresentacao\ControleDeEstoque.Domain\bin\Debug\ControleDeEstoque.Domain.pdb
-C:\Users\Sundays\source\repos\SaluRepresentacao\SaluRepresentacao\ControleDeEstoque.Domain\obj\Debug\ControleDeEstoque.Domain.csproj.AssemblyReference.cache
 C:\Users\Sundays\source\repos\SaluRepresentacao\SaluRepresentacao\ControleDeEstoque.Domain\obj\Debug\ControleDeEstoque.Domain.csproj.CoreCompileInputs.cache
 C:\Users\Sundays\source\repos\SaluRepresentacao\SaluRepresentacao\ControleDeEstoque.Domain\obj\Debug\ControleDeEstoque.Domain.dll
 C:\Users\Sundays\source\repos\SaluRepresentacao\SaluRepresentacao\ControleDeEstoque.Domain\obj\Debug\ControleDeEstoque.Domain.pdb

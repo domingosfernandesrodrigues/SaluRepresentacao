@@ -76,6 +76,7 @@ namespace ControleDeEstoque.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create(CompraViewModel compra)
         {
+            
             if (ModelState.IsValid)
             {
                 var compraDomain = Mapper.Map<CompraViewModel, Compra>(compra);
@@ -86,6 +87,7 @@ namespace ControleDeEstoque.Controllers
             ViewBag.Fornecedor = new SelectList(_fornecedorAppService.GetAll(), "FornecedorId", "Nome", compra.FornecedorId);
             ViewBag.TipoPagamento = new SelectList(_tipoPagamentoAppService.GetAll(), "TipoPagamentoId", "Nome", compra.TipoPagamentoId);
             return View(compra);
+
         }        
 
         // POST: Compra/Edit/5
@@ -100,7 +102,7 @@ namespace ControleDeEstoque.Controllers
                 return RedirectToAction("Index");
             }
             ViewBag.Fornecedor = new SelectList(_fornecedorAppService.GetAll(), "FornecedorId", "Nome", compra.FornecedorId);
-            ViewBag.Fornecedor = new SelectList(_tipoPagamentoAppService.GetAll(), "TipoPagamentoId", "Nome", compra.TipoPagamentoId);
+            ViewBag.TipoPagamento = new SelectList(_tipoPagamentoAppService.GetAll(), "TipoPagamentoId", "Nome", compra.TipoPagamentoId);
             return View(compra);
         }
 

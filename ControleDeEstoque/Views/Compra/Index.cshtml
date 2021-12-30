@@ -1,13 +1,13 @@
 ﻿@model IEnumerable<ControleDeEstoque.ViewModels.CompraViewModel>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Compras";
 }
 
-<h2>Index</h2>
+<h2>Compras</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Novo", "Create")
 </p>
 <table class="table">
     <tr>
@@ -18,16 +18,16 @@
             @Html.DisplayNameFor(model => model.TotalCompra)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.NumeroParcela)
+            @Html.DisplayName("Nº Parcelas")
         </th>
         <th>
             @Html.DisplayNameFor(model => model.Status)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.FornecedorId)
+            @Html.DisplayName("Fornecedor")
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.TipoPagamentoId)
+            @Html.DisplayName("Forma Pagamento")
         </th>
         <th></th>
     </tr>
@@ -47,15 +47,15 @@
             @Html.DisplayFor(modelItem => item.Status)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.FornecedorId)
+            @Html.DisplayFor(modelItem => item.Fornecedor.Nome)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.TipoPagamentoId)
+            @Html.DisplayFor(modelItem => item.TipoPagamento.Nome)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.CompraId }) |
-            @Html.ActionLink("Details", "Details", new { id=item.CompraId }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.CompraId })
+            @Html.ActionLink("Editar", "Edit", new { id=item.CompraId }) |
+            @Html.ActionLink("Detalhes", "Details", new { id=item.CompraId }) |
+            @Html.ActionLink("Excluir", "Delete", new { id=item.CompraId })
         </td>
     </tr>
 }

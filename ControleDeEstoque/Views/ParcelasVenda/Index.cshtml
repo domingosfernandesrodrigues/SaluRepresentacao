@@ -1,0 +1,51 @@
+﻿@model IEnumerable<ControleDeEstoque.ViewModels.ParcelasVendaViewModel>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.VendaId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ValorVenda)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DataPagamento)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DataVencimento)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.VendaId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ValorVenda)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DataPagamento)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DataVencimento)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ParcelasVendaId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ParcelasVendaId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ParcelasVendaId })
+        </td>
+    </tr>
+}
+
+</table>

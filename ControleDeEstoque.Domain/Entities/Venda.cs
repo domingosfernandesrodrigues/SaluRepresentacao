@@ -9,7 +9,7 @@ namespace ControleDeEstoque.Domain.Entities
     public class Venda
     {
         public int VendaId { get; set; }
-        public DateTime DataVenda { get; set; }
+        public DateTime CreateOn { get; set; }
         public int NotaFiscal { get; set; }
         public decimal TotalVenda { get; set; }
         public int NumeroParcelas { get; set; }

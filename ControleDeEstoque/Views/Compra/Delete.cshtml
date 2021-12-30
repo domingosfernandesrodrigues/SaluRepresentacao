@@ -1,14 +1,12 @@
 ﻿@model ControleDeEstoque.ViewModels.CompraViewModel
 
 @{
-    ViewBag.Title = "Delete";
+    ViewBag.Title = "Venda";
 }
 
-<h2>Delete</h2>
+<h2>Excluir compra</h2>
 
-<h3>Are you sure you want to delete this?</h3>
 <div>
-    <h4>CompraViewModel</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
@@ -48,7 +46,7 @@
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.FornecedorId)
+            @Html.DisplayFor(model => model.Fornecedor.Nome)
         </dd>
 
         <dt>
@@ -56,7 +54,7 @@
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.TipoPagamentoId)
+            @Html.DisplayFor(model => model.TipoPagamento.Nome)
         </dd>
 
     </dl>
@@ -65,8 +63,8 @@
         @Html.AntiForgeryToken()
 
         <div class="form-actions no-color">
-            <input type="submit" value="Delete" class="btn btn-default" /> |
-            @Html.ActionLink("Back to List", "Index")
+            <input type="submit" value="Excluir" class="btn btn-default" /> |
+            @Html.ActionLink("Voltar", "Index")
         </div>
     }
 </div>

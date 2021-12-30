@@ -1,0 +1,28 @@
+﻿@model ControleDeEstoque.ViewModels.SubCategoriaViewModel
+
+<div>
+    <h4>SubCategoriaViewModel</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CategoriaId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CategoriaId)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.SubCategoriaId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

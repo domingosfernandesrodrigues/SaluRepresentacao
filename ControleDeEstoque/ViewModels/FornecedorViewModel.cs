@@ -68,6 +68,6 @@ namespace ControleDeEstoque.ViewModels
         public string Estado { get; set; }
 
         [ScaffoldColumn(false)]
-        public DateTime DataCadastro { get; set; }
+        public DateTime CreateOn { get; set; }
     }
 }

@@ -9,7 +9,7 @@ namespace ControleDeEstoque.Domain.Entities
     public class Cliente
     {
         public int ClienteId { get; set; }
-        public DateTime DataCadastro { get; set; }
+        public DateTime CreateOn { get; set; }
         public bool Ativo { get; set; }
         public string Nome { get; set; }
         public string Sobrenome { get; set; }

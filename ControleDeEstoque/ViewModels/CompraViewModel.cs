@@ -13,18 +13,22 @@ namespace ControleDeEstoque.ViewModels
         public int CompraId { get; set; }
 
         [ScaffoldColumn(false)]
-        public DateTime DataCompra { get; set; }
+        public DateTime CreateOn { get; set; }
 
         [DisplayName("Nota Fiscal")]
         public int NotaFiscal { get; set; }
 
         [DisplayName("Total Compra")]
-        public decimal TotalCompra { get; set; }
+        public string TotalCompra { get; set; }
 
         [DisplayName("Número Parcela")]
         public int NumeroParcela { get; set; }
         public string Status { get; set; }
+
+        [DisplayName("Fornecedor")]
         public int FornecedorId { get; set; }
+
+        [DisplayName("Formas Pagamento")]
         public int TipoPagamentoId { get; set; }
 
         public virtual FornecedorViewModel Fornecedor { get; set; }

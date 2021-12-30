@@ -1,0 +1,33 @@
+﻿@model IEnumerable<ControleDeEstoque.ViewModels.SubCategoriaViewModel>
+
+<p>
+    @Html.ActionLink("Novo", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Nome)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CategoriaId)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nome)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Categoria.Nome)
+        </td>
+        <td>
+            @Html.ActionLink("Editar", "Edit", new { id=item.SubCategoriaId }) |
+            @*@Html.ActionLink("Details", "Details", new { id=item.SubCategoriaId }) |*@
+            @Html.ActionLink("Excluir", "Delete", new { id=item.SubCategoriaId })
+        </td>
+    </tr>
+}
+
+</table>

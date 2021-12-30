@@ -22,7 +22,7 @@ namespace ControleDeEstoque.Domain.Entities
         public string EndNumero { get; set; }
         public string Cidade { get; set; }
         public string Estado { get; set; }
-        public DateTime DataCadastro { get; set; }
+        public DateTime CreateOn { get; set; }
 
         
 

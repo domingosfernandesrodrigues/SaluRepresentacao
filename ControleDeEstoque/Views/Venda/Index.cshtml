@@ -1,0 +1,69 @@
+﻿@model IEnumerable<ControleDeEstoque.ViewModels.VendaViewModel>
+
+@{
+    ViewBag.Title = "Vendas";
+}
+
+<h2>Vendas</h2>
+
+<p>
+    @Html.ActionLink("Novo", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.NotaFiscal)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TotalVenda)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NumeroParcelas)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Status)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AVista)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ClienteId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TipoPagamentoId)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.NotaFiscal)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TotalVenda)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NumeroParcelas)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Status)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AVista)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Cliente.Nome)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TipoPagamento.Nome)
+        </td>
+        <td>
+            @Html.ActionLink("Editar", "Edit", new { id=item.VendaId }) |
+            @Html.ActionLink("Detalhes", "Details", new { id=item.VendaId }) |
+            @Html.ActionLink("Excluir", "Delete", new { id=item.VendaId })
+        </td>
+    </tr>
+}
+
+</table>

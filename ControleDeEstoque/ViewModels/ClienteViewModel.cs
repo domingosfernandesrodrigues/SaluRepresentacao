@@ -13,7 +13,7 @@ namespace ControleDeEstoque.ViewModels
         public int ClienteId { get; set; }
 
         [ScaffoldColumn(false)]
-        public DateTime DataCadastro { get; set; }
+        public DateTime CreateOn { get; set; }
         public bool Ativo { get; set; }
 
         [Required(ErrorMessage = "Preencha o campo Nome!")]
@@ -33,7 +33,7 @@ namespace ControleDeEstoque.ViewModels
 
         [Required(ErrorMessage = "Preencha o campo RG/IE!")]
         [MaxLength(10, ErrorMessage = "Máximo {0} caracteres")]
-        [DisplayName("CPF/CNPJ")]
+        [DisplayName("RG/IE")]
         public string rgie { get; set; }
 
         [Required(ErrorMessage = "Preencha o campo Razão Social!")]

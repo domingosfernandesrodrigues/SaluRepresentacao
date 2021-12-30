@@ -165,7 +165,6 @@ C:\Users\Sundays\source\repos\SaluRepresentacao\SaluRepresentacao\ControleDeEsto
 C:\Users\Sundays\source\repos\SaluRepresentacao\SaluRepresentacao\ControleDeEstoque\bin\AutoMapper.xml
 C:\Users\Sundays\source\repos\SaluRepresentacao\SaluRepresentacao\ControleDeEstoque\bin\EntityFramework.xml
 C:\Users\Sundays\source\repos\SaluRepresentacao\SaluRepresentacao\ControleDeEstoque\bin\EntityFramework.SqlServer.xml
-C:\Users\Sundays\source\repos\SaluRepresentacao\SaluRepresentacao\ControleDeEstoque\bin\Microsoft.Web.Infrastructure.xml
 C:\Users\Sundays\source\repos\SaluRepresentacao\SaluRepresentacao\ControleDeEstoque\bin\Ninject.xml
 C:\Users\Sundays\source\repos\SaluRepresentacao\SaluRepresentacao\ControleDeEstoque\bin\Ninject.Web.Common.xml
 C:\Users\Sundays\source\repos\SaluRepresentacao\SaluRepresentacao\ControleDeEstoque\bin\Ninject.Web.Mvc.xml

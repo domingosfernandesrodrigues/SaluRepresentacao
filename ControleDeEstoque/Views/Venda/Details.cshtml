@@ -1,0 +1,73 @@
+﻿@model ControleDeEstoque.ViewModels.VendaViewModel
+
+@{
+    ViewBag.Title = "Venda";
+}
+
+<h2>Informações da venda</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NotaFiscal)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NotaFiscal)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TotalVenda)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TotalVenda)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NumeroParcelas)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NumeroParcelas)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Status)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Status)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AVista)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AVista)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ClienteId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cliente.Nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TipoPagamentoId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TipoPagamento.Nome)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.VendaId }) |
+    @Html.ActionLink("Voltar", "Index")
+</p>

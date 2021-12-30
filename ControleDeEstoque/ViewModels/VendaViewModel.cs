@@ -13,7 +13,7 @@ namespace ControleDeEstoque.ViewModels
         public int VendaId { get; set; }
 
         [ScaffoldColumn(false)]
-        public DateTime DataVenda { get; set; }
+        public DateTime CreateOn { get; set; }
 
         [DisplayName("Nota Fiscal")]
         public int NotaFiscal { get; set; }
@@ -21,6 +21,7 @@ namespace ControleDeEstoque.ViewModels
         [DataType(DataType.Currency)]
         [Range(typeof(decimal), "0", "99999999999999")]
         [Required(ErrorMessage = "Preencha um valor")]
+        [DisplayName("Total Venda")]
         public decimal TotalVenda { get; set; }
 
         [Required(ErrorMessage = "Preencha o campo Números de Parcelas!")]
@@ -28,9 +29,13 @@ namespace ControleDeEstoque.ViewModels
         public int NumeroParcelas { get; set; }
         public string Status { get; set; }
 
-        [DisplayName("A vista")]
+        [DisplayName("À vista")]
         public int AVista { get; set; }
+
+        [DisplayName("Cliente")]
         public int ClienteId { get; set; }
+
+        [DisplayName("Formas Pagamento")]
         public int TipoPagamentoId { get; set; }
 
         public virtual ClienteViewModel Cliente { get; set; }

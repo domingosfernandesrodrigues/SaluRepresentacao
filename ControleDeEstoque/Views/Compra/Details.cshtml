@@ -1,13 +1,12 @@
 ﻿@model ControleDeEstoque.ViewModels.CompraViewModel
 
 @{
-    ViewBag.Title = "Details";
+    ViewBag.Title = "Compra";
 }
 
-<h2>Details</h2>
+<h2>Informações da compra</h2>
 
 <div>
-    <h4>CompraViewModel</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
@@ -47,7 +46,7 @@
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.FornecedorId)
+            @Html.DisplayFor(model => model.Fornecedor.Nome)
         </dd>
 
         <dt>
@@ -55,12 +54,12 @@
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.TipoPagamentoId)
+            @Html.DisplayFor(model => model.TipoPagamento.Nome)
         </dd>
 
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.CompraId }) |
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Editar", "Edit", new { id = Model.CompraId }) |
+    @Html.ActionLink("Voltar", "Index")
 </p>

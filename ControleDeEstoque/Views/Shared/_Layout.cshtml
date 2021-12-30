@@ -24,14 +24,30 @@
                     <li>@Html.ActionLink("Início", "Index", "Home")</li>
                     <li>@Html.ActionLink("Cliente", "Index", "Cliente")</li>
                     <li>@Html.ActionLink("Fornecedor", "Index", "Fornecedor")</li>
-                    <li>@Html.ActionLink("Tipo Pagamento", "Index", "TipoPagamento")</li>
+                    @*<li>@Html.ActionLink("Formas de Pagamento", "Index", "TipoPagamento")</li>*@
+                    <li>@Html.ActionLink("Categoria", "Index", "Categoria")</li>
+                    <li>@Html.ActionLink("SubCategoria", "Index", "SubCategoria")</li>
+                    <li>@Html.ActionLink("Produto", "Index", "Produto")</li>
                     <li>@Html.ActionLink("Compra", "Index", "Compra")</li>
+                    @*<li>@Html.ActionLink("Venda", "Index", "Venda")</li>
+                        <li>@Html.ActionLink("Parcelas Venda", "Index", "parcelasVenda")</li>*@
+                    <li>@Html.ActionLink("Unidade Medida", "Index", "UnidadeMedida")</li>
                     <li>@Html.ActionLink("Sobre", "About", "Home")</li>
                     <li>@Html.ActionLink("Contato", "Contact", "Home")</li>
                 </ul>
             </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("Formas de Pagamento", "Index", "TipoPagamento")</li>
+                    <li>@Html.ActionLink("Venda", "Index", "Venda")</li>
+                    <li>@Html.ActionLink("Parcelas Venda", "Index", "parcelasVenda")</li>
+                </ul>
+            </div>
         </div>
     </div>
+    <br />
+    <br />
+    <br />
     <div class="container body-content">
         @RenderBody()
         <hr />
