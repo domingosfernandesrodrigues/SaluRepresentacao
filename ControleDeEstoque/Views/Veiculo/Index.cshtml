@@ -1,0 +1,66 @@
+﻿@model IEnumerable<ControleDeEstoque.ViewModels.VeiculoViewModel>
+
+@{
+    ViewBag.Title = "Veículo";
+}
+
+<h2>Veículos</h2>
+
+<p>
+    <button onclick="window.location.replace('@Url.Action("Create")')" class="btn btn-success">Novo</button>
+</p>
+@if (Model.Any())
+{
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Modelo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Marca)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Placa)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Cor)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Ativo)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Modelo)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Marca)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Placa)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Cor)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Ativo)
+                </td>                
+                <td>
+                    @Html.ActionLink("Editar", "Edit", new { id = item.VeiculoId }) |
+                    @Html.ActionLink("Detalhes", "Details", new { id = item.VeiculoId }) |
+                    @Html.ActionLink("Excluir", "Delete", new { id = item.VeiculoId })
+                </td>
+            </tr>
+        }
+    </table>
+}
+else
+{
+    <div class="text-center">
+        <h4>Não há registro de Veículos!</h4>
+    </div>
+}

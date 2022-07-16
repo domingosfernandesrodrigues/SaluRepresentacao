@@ -1,0 +1,57 @@
+﻿@model ControleDeEstoque.ViewModels.ManutencaoVeiculoViewModel
+
+@{
+    ViewBag.Title = "Manutenção";
+}
+
+<div>
+    <h2>Excluir Manutenção do Veículo</h2>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.VeiculoId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Veiculo.Modelo)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Servico)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Servico)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Valor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Valor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Descricao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Descricao)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="col-md-12 form-group">
+            <div class="form-actions no-color col-md-4 pull-left">
+                @Html.ActionLink("Voltar", "Index")
+            </div>
+            <div class="form-actions no-color col-md-4 pull-right">
+                <input type="submit" value="Excluir" class="btn btn-danger" />
+            </div>
+        </div>
+    }
+</div>

@@ -1,150 +1,109 @@
 ﻿@model ControleDeEstoque.ViewModels.ClienteViewModel
 
 @{
-    ViewBag.Title = "Excluir";
+    ViewBag.Title = "Cliente";
 }
 
-<h2>Excluir cadastro de cliente</h2>
-
-<div>    
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Ativo)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Ativo)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Nome)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Nome)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Sobrenome)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Sobrenome)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.cpfcnpj)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.cpfcnpj)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.rgie)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.rgie)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.razaoSocial)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.razaoSocial)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Tipo)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Tipo)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.CEP)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.CEP)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Endereco)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Endereco)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Bairro)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Bairro)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Fone)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Fone)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Celular)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Celular)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Email)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Email)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.EndNumero)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.EndNumero)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Cidade)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Cidade)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Estado)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Estado)
-        </dd>
-
-    </dl>
-
-    @using (Html.BeginForm()) {
-        @Html.AntiForgeryToken()
-
-        <div class="form-actions no-color">
-            <input type="submit" value="Excluir" class="btn btn-default" /> |
-            @Html.ActionLink("Voltar", "Index")
+<h2>Excluir cadastro do cliente</h2>
+<hr />
+<form class="form-horizontal form-group">
+    <div class="row">
+        <div class="col-lg-1">
+            @Html.LabelFor(model => model.Ativo)
+            <span class="form-control">@Html.DisplayFor(model => model.Ativo)</span>
         </div>
-    }
-</div>
+
+        <div class="col-lg-4">
+            @Html.LabelFor(model => model.Nome)
+            <span class="form-control">@Html.DisplayFor(model => model.Nome)</span>
+        </div>
+
+        <div class="col-lg-7">
+            @Html.LabelFor(model => model.Sobrenome)
+            <span class="form-control">@Html.DisplayFor(model => model.Sobrenome)</span>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-3">
+            @Html.LabelFor(model => model.cpfcnpj)
+            <span class="form-control">@Html.DisplayFor(model => model.cpfcnpj)</span>
+        </div>
+
+        <div class="col-lg-3">
+            @Html.LabelFor(model => model.rgie)
+            <span class="form-control">@Html.DisplayFor(model => model.rgie)</span>
+        </div>
+
+        <div class="col-lg-4">
+            @Html.LabelFor(model => model.razaoSocial)
+            <span class="form-control">@Html.DisplayFor(model => model.razaoSocial)</span>
+        </div>
+
+        <div class="col-lg-2">
+            @Html.LabelFor(model => model.Tipo)
+            <span class="form-control">@Html.DisplayFor(model => model.Tipo)</span>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-2">
+            @Html.LabelFor(model => model.CEP)
+            <span class="form-control">@Html.DisplayFor(model => model.CEP)</span>
+        </div>
+
+        <div class="col-lg-8">
+            @Html.LabelFor(model => model.Endereco)
+            <span class="form-control">@Html.DisplayFor(model => model.Endereco)</span>
+        </div>
+
+        <div class="col-lg-2">
+            @Html.LabelFor(model => model.EndNumero)
+            <span class="form-control">@Html.DisplayFor(model => model.EndNumero)</span>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-5">
+            @Html.LabelFor(model => model.Bairro)
+            <span class="form-control">@Html.DisplayFor(model => model.Bairro)</span>
+        </div>
+
+        <div class="col-lg-3">
+            @Html.LabelFor(model => model.Fone)
+            <span class="form-control">@Html.DisplayFor(model => model.Fone)</span>
+        </div>
+
+        <div class="col-lg-4">
+            @Html.LabelFor(model => model.Celular)
+            <span class="form-control">@Html.DisplayFor(model => model.Celular)</span>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-6">
+            @Html.LabelFor(model => model.Email)
+            <span class="form-control">@Html.DisplayFor(model => model.Email)</span>
+        </div>
+
+        <div class="col-lg-4">
+            @Html.LabelFor(model => model.Cidade)
+            <span class="form-control">@Html.DisplayFor(model => model.Cidade)</span>
+        </div>
+
+        <div class="col-lg-2">
+            @Html.LabelFor(model => model.Estado)
+            <span class="form-control">@Html.DisplayFor(model => model.Estado)</span>
+        </div>
+    </div>
+</form>
+<br />
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="col-md-12 form-group">
+        @Html.ActionLink("Voltar", "Index") |
+        <input type="submit" value="Excluir" class="btn btn-danger" />
+    </div>
+}
+

@@ -41,20 +41,34 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DevolucaoComprasAppService.cs" />
     <Compile Include="AppServiceBase.cs" />
+    <Compile Include="Interface\IDevolucaoComprasAppService.cs" />
+    <Compile Include="Interface\IManutencaoVeiculoAppService.cs" />
+    <Compile Include="ManutencaoVeiculoAppService.cs" />
+    <Compile Include="VeiculoAppService.cs" />
     <Compile Include="CategoriaAppService.cs" />
+    <Compile Include="CargoAppService.cs" />
+    <Compile Include="EmpresaAppService.cs" />
     <Compile Include="ClienteAppService.cs" />
     <Compile Include="CompraAppService.cs" />
+    <Compile Include="Interface\IAlimentacaoAppService.cs" />
+    <Compile Include="Interface\IVeiculoAppService.cs" />
+    <Compile Include="Interface\IEmpresaAppService.cs" />
+    <Compile Include="Interface\IRemuneracaoAppService.cs" />
+    <Compile Include="AlimentacaoAppService.cs" />
+    <Compile Include="RemuneracaoAppService.cs" />
+    <Compile Include="FuncionarioAppService.cs" />
     <Compile Include="FornecedorAppService.cs" />
     <Compile Include="Interface\IAppServiceBase.cs" />
     <Compile Include="Interface\ICategoriaAppService.cs" />
+    <Compile Include="Interface\ICargoAppService.cs" />
     <Compile Include="Interface\IClienteAppService.cs" />
     <Compile Include="Interface\ICompraAppService.cs" />
+    <Compile Include="Interface\IFuncionarioAppService.cs" />
     <Compile Include="Interface\IFornecedorAppService.cs" />
     <Compile Include="Interface\IItensCompraAppService.cs" />
     <Compile Include="Interface\IItensVendaAppService.cs" />
-    <Compile Include="Interface\IParcelasVendaAppService.cs" />
-    <Compile Include="Interface\IParcelasCompraAppService.cs" />
     <Compile Include="Interface\IProdutoAppService.cs" />
     <Compile Include="Interface\ISubCategoriaAppService.cs" />
     <Compile Include="Interface\ITipoPagamentoAppService.cs" />
@@ -62,8 +76,6 @@
     <Compile Include="Interface\IVendaAppService.cs" />
     <Compile Include="ItensCompraAppService.cs" />
     <Compile Include="ItensVendaAppService.cs" />
-    <Compile Include="ParcelasVendaAppService.cs" />
-    <Compile Include="ParcelasCompraAppService.cs" />
     <Compile Include="ProdutoAppService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SubCategoriaAppService.cs" />

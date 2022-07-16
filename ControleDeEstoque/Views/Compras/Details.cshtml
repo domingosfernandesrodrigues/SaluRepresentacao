@@ -1,0 +1,50 @@
+﻿@model ControleDeEstoque.ViewModels.ItensCompraViewModel
+@{
+    ViewBag.Title = "Compra";
+}
+<div>
+    <h2>Comprovante</h2>
+    <hr />
+    <form class="form-horizontal">
+        <div class="row">
+            <div class="col-lg-6">
+                @Html.LabelFor(model => model.Produto)
+                <span class="form-control">@Html.DisplayFor(model => model.Produto.Nome)</span>
+            </div>
+            <div class="col-lg-2">
+                @Html.LabelFor(model => model.Qtde)
+                <span class="form-control">@Html.DisplayFor(model => model.Qtde)</span>
+            </div>
+            <div class="col-lg-4">
+                @Html.LabelFor(model => model.Valor)
+                <span class="form-control">@Html.DisplayFor(model => model.Valor)</span>
+            </div>
+
+            <div class="col-lg-3">
+                @Html.LabelFor(model => model.Compra.Fornecedor)
+                <span class="form-control">@Html.DisplayFor(model => model.Compra.Fornecedor.Nome)</span>
+            </div>
+            <div class="col-lg-3">
+                @Html.LabelFor(model => model.Compra.TipoPagamentoId)
+                <span class="form-control">@Html.DisplayFor(model => model.Compra.TipoPagamento.Nome)</span>
+            </div>
+            <div class="col-lg-3">
+                @Html.LabelFor(model => model.Compra.Status)
+                <span class="form-control">@Html.DisplayFor(model => model.Compra.Status)</span>
+            </div>
+            <div class="col-lg-3">
+                <Strong>Data/Hora</Strong>
+                <span class="form-control">@Html.DisplayFor(model => model.Compra.CreateOn)</span>
+            </div>
+            <div class="col-lg-3 pull-left">
+                <h4>@Html.LabelFor(model => model.Compra.TotalCompra)</h4>
+                <span class="form-control">@Html.DisplayFor(model => model.Compra.TotalCompra)</span>
+            </div>
+        </div>
+    </form>
+</div>
+<br />
+<div class="col-md-12 form-group">
+    @Html.ActionLink("Voltar", "Index") |
+    @Html.ActionLink("Editar", "Edit", new { id = Model.CompraId })
+</div>

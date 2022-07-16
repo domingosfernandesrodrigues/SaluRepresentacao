@@ -15,10 +15,12 @@ namespace ControleDeEstoque.Controllers
         #region MAPEAMENTO
 
         private readonly IClienteAppService _clienteAppService;
+        private readonly IVendaAppService _vendaAppService;
 
-        public ClienteController(IClienteAppService clienteAppService)
+        public ClienteController(IClienteAppService clienteAppService, IVendaAppService vendaAppService)
         {
             _clienteAppService = clienteAppService;
+            _vendaAppService = vendaAppService;
         }
         #endregion
 
@@ -93,6 +95,8 @@ namespace ControleDeEstoque.Controllers
         public ActionResult DeleteConfirmed(int id)
         {
             var cliente = _clienteAppService.GetById(id);
+            //var venda = _vendaAppService.GetAll();            
+
             _clienteAppService.Remove(cliente);
 
             return RedirectToAction("Index");

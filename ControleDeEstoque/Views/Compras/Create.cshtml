@@ -1,0 +1,89 @@
+﻿@model ControleDeEstoque.ViewModels.ItensCompraViewModel
+@{
+    ViewBag.Title = "Compra";
+}
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+<div class="form-horizontal">
+    <h2>Cadastrar Compra</h2>
+    <hr />
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+    <div class="form-group col-md-6">
+        @Html.LabelFor(model => model.Produto)
+        <div>
+            @Html.DropDownListFor(model => model.ProdutoId, ViewBag.Produto as SelectList, "Selecione...", new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.ProdutoId, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <div class="form-group col-md-6">
+        @Html.LabelFor(model => model.Qtde)
+        <div>
+            @Html.EditorFor(model => model.Qtde, new { htmlAttributes = new { @class = "form-control col-md-6" } })
+            @Html.ValidationMessageFor(model => model.Qtde, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group col-md-6 ">
+        @Html.LabelFor(model => model.Valor)
+        <div>
+            @Html.EditorFor(model => model.Valor, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.Valor, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <div class="form-group col-md-6">
+        @Html.LabelFor(model => model.Compra.Fornecedor)
+        <div>
+            @Html.DropDownListFor(model => model.Compra.FornecedorId, ViewBag.Fornecedor as SelectList, "Selecione...", new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.Compra.FornecedorId, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group col-md-6">
+        @Html.LabelFor(model => model.Compra.TipoPagamentoId)
+        <div>
+            @Html.DropDownListFor(model => model.Compra.TipoPagamentoId, ViewBag.TipoPagamento as SelectList, "Selecione...", new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.Compra.TipoPagamentoId, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group col-md-6">
+        @Html.LabelFor(model => model.Compra.Status)
+        <div>
+            @Html.EditorFor(model => model.Compra.Status, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.Compra.Status, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group col-md-6">
+        @Html.LabelFor(model => model.Compra.TotalCompra)
+        <div>
+            @Html.EditorFor(model => model.Compra.TotalCompra, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.Compra.TotalCompra, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group col-md-6">
+        @Html.LabelFor(model => model.Compra.NotaFiscal)
+        <div>
+            @Html.EditorFor(model => model.Compra.NotaFiscal, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.Compra.NotaFiscal, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="row col-md-12 form-group">
+        <div class="col-md-4 form-group pull-left">
+            @Html.ActionLink("Voltar", "Index")
+        </div>
+        <div class="col-md-4 form-group pull-right">
+            <input type="submit" value="Salvar" class="btn btn-success" />
+        </div>
+    </div>
+</div>
+}
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

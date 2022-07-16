@@ -1,0 +1,58 @@
+﻿@model ControleDeEstoque.ViewModels.AlimentacaoViewModel
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<div>
+    <h4>Excluir alimentação</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Valor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Valor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TipoAlimentacao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TipoAlimentacao)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Qtd)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Qtd)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FuncionarioId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Funcionario.Nome)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="col-md-12 form-group">
+            <div class="form-actions no-color col-md-4 pull-left">
+                @Html.ActionLink("Voltar", "Index")
+            </div>
+            <div class="form-actions no-color col-md-4 pull-right">
+                <input type="submit" value="Excluir" class="btn btn-danger" />
+            </div>
+        </div>
+    }
+</div>

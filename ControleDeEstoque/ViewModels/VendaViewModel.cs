@@ -24,22 +24,24 @@ namespace ControleDeEstoque.ViewModels
         [DisplayName("Total Venda")]
         public decimal TotalVenda { get; set; }
 
-        [Required(ErrorMessage = "Preencha o campo Números de Parcelas!")]
-        [DisplayName("Número Parcelas")]
-        public int NumeroParcelas { get; set; }
         public string Status { get; set; }
-
-        [DisplayName("À vista")]
-        public int AVista { get; set; }
 
         [DisplayName("Cliente")]
         public int ClienteId { get; set; }
 
-        [DisplayName("Formas Pagamento")]
+        [DisplayName("Formas de Pagamento")]
         public int TipoPagamentoId { get; set; }
 
-        public virtual ClienteViewModel Cliente { get; set; }
+        [DisplayName("Empresa")]
+        public int EmpresaId { get; set; }
 
+        [DisplayName("Funcionário")]
+        public int FuncionarioId { get; set; }
+
+
+        public virtual ClienteViewModel Cliente { get; set; }
         public virtual TipoPagamentoViewModel TipoPagamento { get; set; }
+        public virtual EmpresaViewModel Empresa { get; set; }
+        public virtual FuncionarioViewModel Funcionario { get; set; }
     }
 }

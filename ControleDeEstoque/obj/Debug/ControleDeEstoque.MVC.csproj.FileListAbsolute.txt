@@ -145,7 +145,6 @@ C:\Users\Sundays\source\repos\SaluRepresentacao\SaluRepresentacao\ControleDeEsto
 C:\Users\Sundays\source\repos\SaluRepresentacao\SaluRepresentacao\ControleDeEstoque\bin\EntityFramework.dll
 C:\Users\Sundays\source\repos\SaluRepresentacao\SaluRepresentacao\ControleDeEstoque\bin\EntityFramework.SqlServer.dll
 C:\Users\Sundays\source\repos\SaluRepresentacao\SaluRepresentacao\ControleDeEstoque\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
-C:\Users\Sundays\source\repos\SaluRepresentacao\SaluRepresentacao\ControleDeEstoque\bin\Microsoft.Web.Infrastructure.dll
 C:\Users\Sundays\source\repos\SaluRepresentacao\SaluRepresentacao\ControleDeEstoque\bin\Ninject.dll
 C:\Users\Sundays\source\repos\SaluRepresentacao\SaluRepresentacao\ControleDeEstoque\bin\Ninject.Web.Common.dll
 C:\Users\Sundays\source\repos\SaluRepresentacao\SaluRepresentacao\ControleDeEstoque\bin\Ninject.Web.Mvc.dll
@@ -184,7 +183,8 @@ C:\Users\Sundays\source\repos\SaluRepresentacao\SaluRepresentacao\ControleDeEsto
 C:\Users\Sundays\source\repos\SaluRepresentacao\SaluRepresentacao\ControleDeEstoque\bin\pt-br\System.Web.WebPages.resources.dll
 C:\Users\Sundays\source\repos\SaluRepresentacao\SaluRepresentacao\ControleDeEstoque\bin\pt-br\System.Web.WebPages.Deployment.resources.dll
 C:\Users\Sundays\source\repos\SaluRepresentacao\SaluRepresentacao\ControleDeEstoque\bin\pt-br\System.Web.WebPages.Razor.resources.dll
-C:\Users\Sundays\source\repos\SaluRepresentacao\SaluRepresentacao\ControleDeEstoque\obj\Debug\ControleDeEstoque.MVC.csproj.AssemblyReference.cache
 C:\Users\Sundays\source\repos\SaluRepresentacao\SaluRepresentacao\ControleDeEstoque\obj\Debug\ControleDeEstoque.MVC.csproj.CoreCompileInputs.cache
+C:\Users\Sundays\source\repos\SaluRepresentacao\SaluRepresentacao\ControleDeEstoque\obj\Debug\ControleDeEstoque.MVC.csproj.CopyComplete
 C:\Users\Sundays\source\repos\SaluRepresentacao\SaluRepresentacao\ControleDeEstoque\obj\Debug\ControleDeEstoque.dll
 C:\Users\Sundays\source\repos\SaluRepresentacao\SaluRepresentacao\ControleDeEstoque\obj\Debug\ControleDeEstoque.pdb
+C:\Users\Sundays\source\repos\SaluRepresentacao\SaluRepresentacao\ControleDeEstoque\obj\Debug\ControleDeEstoque.MVC.csproj.AssemblyReference.cache

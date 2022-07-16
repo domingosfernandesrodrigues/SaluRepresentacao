@@ -7,7 +7,7 @@ using System.Web;
 
 namespace ControleDeEstoque.ViewModels
 {
-    public class ClienteViewModel
+    public class ClienteViewModel 
     {
         [Key]
         public int ClienteId { get; set; }
@@ -26,14 +26,14 @@ namespace ControleDeEstoque.ViewModels
         [MinLength(2, ErrorMessage = "Mínimo {0} caracteres ")]
         public string Sobrenome { get; set; }
 
-        [Required(ErrorMessage = "Preencha o campo CPF/CNPJ!")]
+        [Required(ErrorMessage = "Preencha o campo CNPJ!")]
         [MaxLength(14, ErrorMessage = "Máximo {0} caracteres")]        
-        [DisplayName("CPF/CNPJ")]
+        [DisplayName("CNPJ")]
         public string cpfcnpj { get; set; }
 
-        [Required(ErrorMessage = "Preencha o campo RG/IE!")]
+        [Required(ErrorMessage = "Preencha o campo RG!")]
         [MaxLength(10, ErrorMessage = "Máximo {0} caracteres")]
-        [DisplayName("RG/IE")]
+        [DisplayName("RG")]
         public string rgie { get; set; }
 
         [Required(ErrorMessage = "Preencha o campo Razão Social!")]
@@ -51,6 +51,7 @@ namespace ControleDeEstoque.ViewModels
         [Required(ErrorMessage = "Preencha o campo Endereço!")]
         [MaxLength(150, ErrorMessage = "Máximo {0} caracteres")]
         [MinLength(2, ErrorMessage = "Mínimo {0} caracteres ")]
+        [DisplayName("Endereço")]
         public string Endereco { get; set; }
 
         [Required(ErrorMessage = "Preencha o campo Bairro!")]
@@ -76,7 +77,7 @@ namespace ControleDeEstoque.ViewModels
         public string EndNumero { get; set; }
         public string Cidade { get; set; }
         public string Estado { get; set; }
-
-
+        
+        
     }
 }

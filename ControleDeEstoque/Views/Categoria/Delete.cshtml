@@ -1,8 +1,10 @@
 ﻿@model ControleDeEstoque.ViewModels.CategoriaViewModel
-
+@{
+    ViewBag.Title = "Categoria";
+}
 
 <div>
-    <h4>Excluir categoria</h4>
+    <h2>Excluir Categoria</h2>
     <hr />
     <dl class="dl-horizontal">
         <dt>
@@ -15,12 +17,17 @@
 
     </dl>
 
-    @using (Html.BeginForm()) {
+    @using (Html.BeginForm())
+    {
         @Html.AntiForgeryToken()
 
-        <div class="form-actions no-color">
-            <input type="submit" value="Excluir" class="btn btn-default" /> |
-            @Html.ActionLink("Voltar", "Index")
+        <div class="col-md-12 form-group">
+            <div class="pull-left col-md-4 ">
+                @Html.ActionLink("Voltar", "Index")
+            </div>
+            <div class="pull-right col-md-4 ">
+                <input type="submit" value="Excluir" class="btn btn-danger" />
+            </div>
         </div>
     }
 </div>

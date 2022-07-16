@@ -1,75 +1,103 @@
 ﻿@model IEnumerable<ControleDeEstoque.ViewModels.ClienteViewModel>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Cliente";
 }
 
 <h2>Clientes</h2>
 
-<p>
-    @Html.ActionLink("Novo", "Create")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Ativo)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Nome)
-        </th>        
-        <th>
-            @Html.DisplayNameFor(model => model.cpfcnpj)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.rgie)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.razaoSocial)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Tipo)
-        </th>        
-        <th>
-            @Html.DisplayNameFor(model => model.Fone)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Celular)
-        </th>            
-    </tr>
+ <p>
+     <button onclick="window.location.replace('@Url.Action("Create")')" class="btn btn-success">Novo</button>
+ </p>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Ativo)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Nome)
-        </td>        
-        <td>
-            @Html.DisplayFor(modelItem => item.cpfcnpj)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.rgie)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.razaoSocial)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Tipo)
-        </td>
-        
-        <td>
-            @Html.DisplayFor(modelItem => item.Fone)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Celular)
-        </td>       
-        <td>
-            @Html.ActionLink("Editar", "Edit", new { id=item.ClienteId }) |
-            @Html.ActionLink("Detalhes", "Details", new { id=item.ClienteId }) |
-            @Html.ActionLink("Excluir", "Delete", new { id=item.ClienteId })
-        </td>
-    </tr>
+@if (Model.Any())
+{
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Ativo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Nome)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.cpfcnpj)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.rgie)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.razaoSocial)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Tipo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Fone)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Celular)
+            </th>
+            <th></th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Ativo)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nome)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.cpfcnpj)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.rgie)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.razaoSocial)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Tipo)
+                </td>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.Fone)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Celular)
+                </td>
+                <td>
+                    @Html.ActionLink("Editar", "Edit", new { @class = "glyphicon glyphicon-plus", id = item.ClienteId  } ) |
+                    @Html.ActionLink("Detalhes", "Details", new { id = item.ClienteId }) |
+                    @Html.ActionLink("Excluir", "Delete", new { id = item.ClienteId })
+                </td>
+            </tr>
+        }
+    </table>
+}
+else
+{
+    <div class="text-center">
+        <h4>Não há registro de Clientes!</h4>
+    </div>
 }
 
-</table>
+@*<div class="row">
+        <nav aria-label="..." class="pull-right">
+            <ul class="pagination">
+                <li class="page-item disabled">
+                    <a class="page-link" href="#" tabindex="-1">Anterior</a>
+                </li>
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item active">
+                    <a class="page-link" href="#">2 <span class="sr-only">(atual)</span></a>
+                </li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item">
+                    <a class="page-link" href="#">Próximo</a>
+                </li>
+            </ul>
+        </nav>
+    </div>*@

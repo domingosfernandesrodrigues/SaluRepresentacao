@@ -19,19 +19,22 @@ namespace ControleDeEstoque.ViewModels
         public int NotaFiscal { get; set; }
 
         [DisplayName("Total Compra")]
-        public string TotalCompra { get; set; }
-
-        [DisplayName("Número Parcela")]
-        public int NumeroParcela { get; set; }
+        public decimal TotalCompra { get; set; }
+        
         public string Status { get; set; }
 
+        [Required(ErrorMessage = "Informe o Fornecedor!")]
         [DisplayName("Fornecedor")]
         public int FornecedorId { get; set; }
 
-        [DisplayName("Formas Pagamento")]
+        [Required(ErrorMessage = "Informe a Forma de Pagamento!")]
+        [DisplayName("Forma Pagamento")]
         public int TipoPagamentoId { get; set; }
+
+        public int EmpresaId { get; set; }
 
         public virtual FornecedorViewModel Fornecedor { get; set; }
         public virtual TipoPagamentoViewModel TipoPagamento { get; set; }
+        public virtual EmpresaViewModel Empresa { get; set; }
     }
 }

@@ -21,14 +21,20 @@ namespace ControleDeEstoque.AutoMapper
             Mapper.CreateMap<Compra, CompraViewModel>();
             Mapper.CreateMap<Fornecedor, FornecedorViewModel>();
             Mapper.CreateMap<ItensCompra, ItensCompraViewModel>();
-            Mapper.CreateMap<ItensVenda, ItensVendaViewModel>();
-            Mapper.CreateMap<ParcelasCompra, ParcelasCompraViewModel>();
-            Mapper.CreateMap<ParcelasVenda, ParcelasVendaViewModel>();
+            Mapper.CreateMap<ItensVenda, ItensVendaViewModel>();           
             Mapper.CreateMap<Produto, ProdutoViewModel>();
             Mapper.CreateMap<SubCategoria, SubCategoriaViewModel>();
             Mapper.CreateMap<TipoPagamento, TipoPagamentoViewModel>();
             Mapper.CreateMap<UnidadeMedida, UnidadeMedidaViewModel>();
             Mapper.CreateMap<Venda, VendaViewModel>();
+            Mapper.CreateMap<Funcionario, FuncionarioViewModel>();
+            Mapper.CreateMap<Cargo, CargoViewModel>();
+            Mapper.CreateMap<Alimentacao, AlimentacaoViewModel>();
+            Mapper.CreateMap<Remuneracao, RemuneracaoViewModel>();
+            Mapper.CreateMap<Empresa, EmpresaViewModel>();
+            Mapper.CreateMap<Veiculo, VeiculoViewModel>();
+            Mapper.CreateMap<ManutencaoVeiculo, ManutencaoVeiculoViewModel>();
+            Mapper.CreateMap<DevolucaoCompras, DevolucaoComprasViewModel>();
         }
     }
 }

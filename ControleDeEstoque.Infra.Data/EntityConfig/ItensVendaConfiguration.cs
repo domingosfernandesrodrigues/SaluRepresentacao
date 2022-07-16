@@ -21,6 +21,7 @@ namespace ControleDeEstoque.Infra.Data.EntityConfig
             HasRequired(iv => iv.Produto)
                 .WithMany()
                 .HasForeignKey(iv => iv.ProdutoId);
+                        
         }
     }
 }

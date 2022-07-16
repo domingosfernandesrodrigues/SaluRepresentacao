@@ -1,0 +1,41 @@
+﻿@model ControleDeEstoque.ViewModels.VeiculoViewModel
+
+@{
+    ViewBag.Title = "Veículo";
+}
+
+<div>
+    <h2>Informações do Veículo</h2>
+    <hr />
+    <form class="form-horizontal">
+        <div class="row">
+            <div class="col-lg-1">
+                @Html.LabelFor(model => model.Ativo)
+                <span class="form-control">@Html.DisplayFor(model => model.Ativo)</span>
+            </div>
+            <div class="col-lg-6">
+                @Html.LabelFor(model => model.Modelo)
+                <span class="form-control">@Html.DisplayFor(model => model.Modelo)</span>
+            </div>
+            <div class="col-lg-5">
+                @Html.LabelFor(model => model.Marca)
+                <span class="form-control">@Html.DisplayFor(model => model.Marca)</span>
+            </div>
+            <div class="col-lg-6">
+                @Html.LabelFor(model => model.Placa)
+                <span class="form-control">@Html.DisplayFor(model => model.Placa)</span>
+            </div>
+            <div class="col-lg-6">
+                @Html.LabelFor(model => model.Cor)
+                <span class="form-control">@Html.DisplayFor(model => model.Cor)</span>
+            </div>
+        </div>
+    </form>
+</div>
+<br />
+<div class="col-md-12 form-group">
+    <p>
+        @Html.ActionLink("Voltar", "Index") |
+        @Html.ActionLink("Editar", "Edit", new { id = Model.VeiculoId })
+    </p>
+</div>

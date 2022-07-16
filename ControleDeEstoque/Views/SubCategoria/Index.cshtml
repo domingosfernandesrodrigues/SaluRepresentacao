@@ -1,33 +1,46 @@
 ﻿@model IEnumerable<ControleDeEstoque.ViewModels.SubCategoriaViewModel>
-
-<p>
-    @Html.ActionLink("Novo", "Create")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Nome)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.CategoriaId)
-        </th>
-        <th></th>
-    </tr>
-
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Nome)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Categoria.Nome)
-        </td>
-        <td>
-            @Html.ActionLink("Editar", "Edit", new { id=item.SubCategoriaId }) |
-            @*@Html.ActionLink("Details", "Details", new { id=item.SubCategoriaId }) |*@
-            @Html.ActionLink("Excluir", "Delete", new { id=item.SubCategoriaId })
-        </td>
-    </tr>
+@{
+    ViewBag.Title = "Subcategoria";
 }
 
-</table>
+<h2>Subcategorias</h2>
+<p>
+    <button onclick="window.location.replace('@Url.Action("Create")')" class="btn btn-success">Novo</button>
+</p>
+@if (Model.Any())
+{
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Nome)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CategoriaId)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nome)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Categoria.Nome)
+                </td>
+                <td>
+                    @Html.ActionLink("Editar", "Edit", new { id = item.SubCategoriaId }) |
+                    @*@Html.ActionLink("Details", "Details", new { id=item.SubCategoriaId }) |*@
+                    @Html.ActionLink("Excluir", "Delete", new { id = item.SubCategoriaId })
+                </td>
+            </tr>
+        }
+    </table>
+}
+else
+{
+    <div class="text-center">
+        <h4>Não há registro de Subcategorias!</h4>
+    </div>
+}

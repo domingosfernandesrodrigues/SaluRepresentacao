@@ -1,73 +1,140 @@
-﻿@model ControleDeEstoque.ViewModels.VendaViewModel
-
+﻿@model ControleDeEstoque.ViewModels.ItensVendaViewModel
 @{
     ViewBag.Title = "Venda";
 }
-
-<h2>Informações da venda</h2>
-
 <div>
+    <h2>Notal Fiscal</h2>
     <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.NotaFiscal)
-        </dt>
+    <fieldset>
+        <legend>Dados Empresa</legend>
+        <div class="row">
+            <div class="col-lg-6">
+                @Html.LabelFor(model => model.Venda.Empresa.Nome)
+                <span class="form-control">@Html.DisplayFor(model => model.Venda.Empresa.Nome)</span>
+            </div>
 
-        <dd>
-            @Html.DisplayFor(model => model.NotaFiscal)
-        </dd>
+            <div class="col-lg-3">
+                @Html.LabelFor(model => model.Venda.Empresa.cnpj)
+                <span class="form-control">@Html.DisplayFor(model => model.Venda.Empresa.cnpj)</span>
+            </div>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.TotalVenda)
-        </dt>
+            <div class="col-lg-3">
+                @Html.LabelFor(model => model.Venda.Empresa.NaturezaJuridica)
+                <span class="form-control">@Html.DisplayFor(model => model.Venda.Empresa.NaturezaJuridica)</span>
+            </div>
 
-        <dd>
-            @Html.DisplayFor(model => model.TotalVenda)
-        </dd>
+            <div class="col-lg-6">
+                @Html.LabelFor(model => model.Venda.Empresa.Email)
+                <span class="form-control">@Html.DisplayFor(model => model.Venda.Empresa.Email)</span>
+            </div>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.NumeroParcelas)
-        </dt>
+            <div class="col-lg-3">
+                @Html.LabelFor(model => model.Venda.Empresa.Celular)
+                <span class="form-control">@Html.DisplayFor(model => model.Venda.Empresa.Celular)</span>
+            </div>
 
-        <dd>
-            @Html.DisplayFor(model => model.NumeroParcelas)
-        </dd>
+            <div class="col-lg-3">
+                @Html.LabelFor(model => model.Venda.Empresa.Fone)
+                <span class="form-control">@Html.DisplayFor(model => model.Venda.Empresa.Fone)</span>
+            </div>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Status)
-        </dt>
+            <div class="col-lg-5">
+                @Html.LabelFor(model => model.Venda.Empresa.Endereco)
+                <span class="form-control">@Html.DisplayFor(model => model.Venda.Empresa.Endereco)</span>
+            </div>
 
-        <dd>
-            @Html.DisplayFor(model => model.Status)
-        </dd>
+            <div class="col-lg-2">
+                @Html.LabelFor(model => model.Venda.Empresa.EndNumero)
+                <span class="form-control">@Html.DisplayFor(model => model.Venda.Empresa.EndNumero)</span>
+            </div>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.AVista)
-        </dt>
+            <div class="col-lg-5">
+                @Html.LabelFor(model => model.Venda.Empresa.Bairro)
+                <span class="form-control">@Html.DisplayFor(model => model.Venda.Empresa.Bairro)</span>
+            </div>
 
-        <dd>
-            @Html.DisplayFor(model => model.AVista)
-        </dd>
+            <div class="col-lg-3">
+                @Html.LabelFor(model => model.Venda.Empresa.CEP)
+                <span class="form-control">@Html.DisplayFor(model => model.Venda.Empresa.CEP)</span>
+            </div>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.ClienteId)
-        </dt>
+            <div class="col-lg-6">
+                @Html.LabelFor(model => model.Venda.Empresa.Cidade)
+                <span class="form-control">@Html.DisplayFor(model => model.Venda.Empresa.Cidade)</span>
+            </div>
 
-        <dd>
-            @Html.DisplayFor(model => model.Cliente.Nome)
-        </dd>
+            <div class="col-lg-3">
+                @Html.LabelFor(model => model.Venda.Empresa.Estado)
+                <span class="form-control">@Html.DisplayFor(model => model.Venda.Empresa.Estado)</span>
+            </div>
+        </div>
+    </fieldset>
+    <br />
 
-        <dt>
-            @Html.DisplayNameFor(model => model.TipoPagamentoId)
-        </dt>
+    <fieldset>
+        <legend>Dados Comprador</legend>
+        <div class="row">
+            <div class="col-lg-4">
+                @Html.LabelFor(model => model.Venda.Cliente.Nome)
+                <span class="form-control">@Html.DisplayFor(model => model.Venda.Cliente.Nome)</span>
+            </div>
 
-        <dd>
-            @Html.DisplayFor(model => model.TipoPagamento.Nome)
-        </dd>
+            <div class="col-lg-8">
+                @Html.LabelFor(model => model.Venda.Cliente.Sobrenome)
+                <span class="form-control">@Html.DisplayFor(model => model.Venda.Cliente.Sobrenome)</span>
+            </div>
 
-    </dl>
+            <div class="col-lg-3">
+                @Html.LabelFor(model => model.Venda.Cliente.cpfcnpj)
+                <span class="form-control">@Html.DisplayFor(model => model.Venda.Cliente.cpfcnpj)</span>
+            </div>
+
+            <div class="col-lg-3">
+                @Html.LabelFor(model => model.Venda.Cliente.Celular)
+                <span class="form-control">@Html.DisplayFor(model => model.Venda.Cliente.Celular)</span>
+            </div>
+
+            <div class="col-lg-6">
+                @Html.LabelFor(model => model.Venda.Cliente.Email)
+                <span class="form-control">@Html.DisplayFor(model => model.Venda.Cliente.Email)</span>
+            </div>
+        </div>
+    </fieldset>
+    <br />
+
+    <fieldset class="form-horizontal">
+        <legend>Dados da Venda</legend>
+        <div class="row">
+
+            <div class="col-lg-3">
+                @Html.LabelFor(model => model.Venda.NotaFiscal)
+                <span class="form-control">@Html.DisplayFor(model => model.Venda.NotaFiscal)</span>
+            </div>
+
+            <div class="col-lg-9">
+                @Html.LabelFor(model => model.Produto)
+                <span class="form-control">@Html.DisplayFor(model => model.Produto.Nome)</span>
+            </div>
+
+            <div class="col-lg-4">
+                @Html.LabelFor(model => model.Valor)
+                <span class="form-control">@Html.DisplayFor(model => model.Valor)</span>
+            </div>
+
+            <div class="col-lg-4">
+                @Html.LabelFor(model => model.Qtde)
+                <span class="form-control">@Html.DisplayFor(model => model.Qtde)</span>
+            </div>
+
+            <div class="col-lg-4">
+                @Html.LabelFor(model => model.Venda.TotalVenda)
+                <span class="form-control">@Html.DisplayFor(model => model.Venda.TotalVenda)</span>
+            </div>
+        </div>
+    </fieldset>
 </div>
-<p>
-    @Html.ActionLink("Editar", "Edit", new { id = Model.VendaId }) |
-    @Html.ActionLink("Voltar", "Index")
-</p>
+<br />
+<div class="col-md-12 form-group">
+    @Html.ActionLink("Voltar", "Index") |
+    @Html.ActionLink("Editar", "Edit", new { id = Model.VendaId })
+</div>

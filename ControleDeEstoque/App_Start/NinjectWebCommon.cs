@@ -74,13 +74,20 @@ namespace ControleDeEstoque.App_Start
             kernel.Bind<IFornecedorAppService>().To<FornecedorAppService>();
             kernel.Bind<IItensCompraAppService>().To<ItensCompraAppService>();
             kernel.Bind<IItensVendaAppService>().To<ItensVendaAppService>();
-            kernel.Bind<IParcelasCompraAppService>().To<ParcelasCompraAppService>();
-            kernel.Bind<IParcelasVendaAppService>().To<ParcelasVendaAppService>();
             kernel.Bind<IProdutoAppService>().To<ProdutoAppService>();
             kernel.Bind<ISubCategoriaAppService>().To<SubCategoriaAppService>();
             kernel.Bind<ITipoPagamentoAppService>().To<TipoPagamentoAppService>();
             kernel.Bind<IUnidadeMedidaAppService>().To<UnidadeMedidaAppService>();
             kernel.Bind<IVendaAppService>().To<VendaAppService>();
+            kernel.Bind<IFuncionarioAppService>().To<FuncionarioAppService>();
+            kernel.Bind<ICargoAppService>().To<CargoAppService>();
+            kernel.Bind<IAlimentacaoAppService>().To<AlimentacaoAppService>();
+            kernel.Bind<IRemuneracaoAppService>().To<RemuneracaoAppService>();
+            kernel.Bind<IEmpresaAppService>().To<EmpresaAppService>();
+            kernel.Bind<IVeiculoAppService>().To<VeiculoAppService>();
+            kernel.Bind<IManutencaoVeiculoAppService>().To<ManutencaoVeiculoAppService>();
+            kernel.Bind<IDevolucaoComprasAppService>().To<DevolucaoComprasAppService>();
+            
 
             kernel.Bind(typeof(IServiceBase<>)).To(typeof(ServiceBase<>));
             kernel.Bind<IClienteService>().To<ClienteService>();
@@ -89,13 +96,19 @@ namespace ControleDeEstoque.App_Start
             kernel.Bind<IFornecedorService>().To<FornecedorService>();
             kernel.Bind<IItensCompraService>().To<ItensCompraService>();
             kernel.Bind<IItensVendaService>().To<ItensVendaService>();
-            kernel.Bind<IParcelasCompraService>().To<ParcelasCompraService>();
-            kernel.Bind<IParcelasVendaService>().To<ParcelasVendaService>();
             kernel.Bind<IProdutoService>().To<ProdutoService>();
             kernel.Bind<ISubCategoriaService>().To<SubCategoriaService>();
             kernel.Bind<ITipoPagamentoService>().To<TipoPagamentoService>();
             kernel.Bind<IUnidadeMedidaService>().To<UnidadeMedidaService>();
             kernel.Bind<IVendaService>().To<VendaService>();
+            kernel.Bind<IFuncionarioService>().To<FuncionarioService>();
+            kernel.Bind<ICargoService>().To<CargoService>();
+            kernel.Bind<IAlimentacaoService>().To<AlimentacaoService>();
+            kernel.Bind<IRemuneracaoService>().To<RemuneracaoService>();
+            kernel.Bind<IEmpresaService>().To<EmpresaService>();
+            kernel.Bind<IVeiculoService>().To<VeiculoService>();
+            kernel.Bind<IManutencaoVeiculoService>().To<ManutencaoVeiculoService>();
+            kernel.Bind<IDevolucaoComprasService>().To<DevolucaoComprasService>();
 
             kernel.Bind(typeof(IRepositoryBase<>)).To(typeof(RepositoryBase<>));
             kernel.Bind<IClienteRepository>().To<ClienteRepository>();
@@ -104,13 +117,19 @@ namespace ControleDeEstoque.App_Start
             kernel.Bind<IFornecedorRepository>().To<FornecedorRepository>();
             kernel.Bind<IItensCompraRepository>().To<ItensCompraRepository>();
             kernel.Bind<IItensVendaRepository>().To<ItensVendaRepository>();
-            kernel.Bind<IParcelasCompraRepository>().To<ParcelasCompraRepository>();
-            kernel.Bind<IParcelasVendaRepository>().To<ParcelasVendaRepository>();
             kernel.Bind<IProdutoRepository>().To<ProdutoRepository>();
             kernel.Bind<ISubCategoriaRepository>().To<SubCategoriaRepository>();
             kernel.Bind<ITipoPagamentoRepository>().To<TipoPagamentoRepository>();
             kernel.Bind<IUnidadeMedidaRepository>().To<UnidadeMedidaRepository>();
             kernel.Bind<IVendaRepository>().To<VendaRepository>();
+            kernel.Bind<IFuncionarioRepository>().To<FuncionarioRepository>();
+            kernel.Bind<ICargoRepository>().To<CargoRepository>();
+            kernel.Bind<IAlimentacaoRepository>().To<AlimentacaoRepository>();
+            kernel.Bind<IRemuneracaoRepository>().To<RemuneracaoRepository>();
+            kernel.Bind<IEmpresaRepository>().To<EmpresaRepository>();
+            kernel.Bind<IVeiculoRepository>().To<VeiculoRepository>();
+            kernel.Bind<IManutencaoVeiculoRepository>().To<ManutencaoVeiculoRepository>();
+            kernel.Bind<IDevolucaoComprasRepository>().To<DevolucaoComprasRepository>();
         }        
     }
 }

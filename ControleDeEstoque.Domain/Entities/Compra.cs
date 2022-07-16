@@ -11,13 +11,15 @@ namespace ControleDeEstoque.Domain.Entities
         public int CompraId { get; set; }
         public DateTime CreateOn { get; set; }
         public int NotaFiscal { get; set; }
-        public string TotalCompra { get; set; }
-        public int NumeroParcela { get; set; }
+        public decimal TotalCompra { get; set; }
         public string Status { get; set; }
         public int FornecedorId { get; set; }
         public int TipoPagamentoId { get; set; }
+        public int EmpresaId { get; set; }
+        
         public virtual Fornecedor Fornecedor { get; set; }
         public virtual TipoPagamento TipoPagamento { get; set; }
+        public virtual Empresa Empresa { get; set; }
 
 
     }

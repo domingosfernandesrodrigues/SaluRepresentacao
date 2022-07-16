@@ -8,114 +8,79 @@
 
 <div>
     <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Nome)
-        </dt>
+    <form class="form-horizontal">
+        <div class="row">
 
-        <dd>
-            @Html.DisplayFor(model => model.Nome)
-        </dd>
+            <div class="col-lg-4">
+                @Html.LabelFor(model => model.Nome)
+                <span class="form-control">@Html.DisplayFor(model => model.Nome)</span>
+            </div>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Sobrenome)
-        </dt>
+            <div class="col-lg-8">
+                @Html.LabelFor(model => model.Sobrenome)
+                <span class="form-control">@Html.DisplayFor(model => model.Sobrenome)</span>
+            </div>
 
-        <dd>
-            @Html.DisplayFor(model => model.Sobrenome)
-        </dd>
+            <div class="col-lg-6">
+                @Html.LabelFor(model => model.RazaoSocial)
+                <span class="form-control">@Html.DisplayFor(model => model.RazaoSocial)</span>
+            </div>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.RazaoSocial)
-        </dt>
+            <div class="col-lg-3">
+                @Html.LabelFor(model => model.Cnpj)
+                <span class="form-control">@Html.DisplayFor(model => model.Cnpj)</span>
+            </div>
 
-        <dd>
-            @Html.DisplayFor(model => model.RazaoSocial)
-        </dd>
+            <div class="col-lg-3">
+                @Html.LabelFor(model => model.CEP)
+                <span class="form-control">@Html.DisplayFor(model => model.CEP)</span>
+            </div>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Cnpj)
-        </dt>
+            <div class="col-lg-7">
+                @Html.LabelFor(model => model.Endereco)
+                <span class="form-control">@Html.DisplayFor(model => model.Endereco)</span>
+            </div>
 
-        <dd>
-            @Html.DisplayFor(model => model.Cnpj)
-        </dd>
+            <div class="col-lg-5">
+                @Html.LabelFor(model => model.Bairro)
+                <span class="form-control">@Html.DisplayFor(model => model.Bairro)</span>
+            </div>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.CEP)
-        </dt>
+            <div class="col-lg-3">
+                @Html.LabelFor(model => model.Fone)
+                <span class="form-control">@Html.DisplayFor(model => model.Fone)</span>
+            </div>
 
-        <dd>
-            @Html.DisplayFor(model => model.CEP)
-        </dd>
+            <div class="col-lg-3">
+                @Html.LabelFor(model => model.Celular)
+                <span class="form-control">@Html.DisplayFor(model => model.Celular)</span>
+            </div>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Endereco)
-        </dt>
+            <div class="col-lg-6">
+                @Html.LabelFor(model => model.Email)
+                <span class="form-control">@Html.DisplayFor(model => model.Email)</span>
+            </div>
 
-        <dd>
-            @Html.DisplayFor(model => model.Endereco)
-        </dd>
+            <div class="col-lg-3">
+                @Html.LabelFor(model => model.EndNumero)
+                <span class="form-control">@Html.DisplayFor(model => model.EndNumero)</span>
+            </div>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Bairro)
-        </dt>
+            <div class="col-lg-2">
+                @Html.LabelFor(model => model.Estado)
+                <span class="form-control">@Html.DisplayFor(model => model.Estado)</span>
+            </div>
 
-        <dd>
-            @Html.DisplayFor(model => model.Bairro)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Fone)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Fone)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Celular)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Celular)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Email)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Email)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.EndNumero)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.EndNumero)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Cidade)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Cidade)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Estado)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Estado)
-        </dd>
-
-    </dl>
+            <div class="col-lg-7">
+                @Html.LabelFor(model => model.Cidade)
+                <span class="form-control">@Html.DisplayFor(model => model.Cidade)</span>
+            </div>
+        </div>
+    </form>
+    <br />
+    <div class="col-md-12 form-group">
+        @Html.ActionLink("Voltar", "Index") |
+        @Html.ActionLink("Editar", "Edit", new { id = Model.FornecedorId })
+    </div>
 </div>
-<p>
-    @Html.ActionLink("Editar", "Edit", new { id = Model.FornecedorId }) |
-    @Html.ActionLink("Voltar", "Index")
-</p>
+

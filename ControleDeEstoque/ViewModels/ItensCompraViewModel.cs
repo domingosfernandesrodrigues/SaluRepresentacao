@@ -20,7 +20,11 @@ namespace ControleDeEstoque.ViewModels
         [Range(typeof(decimal), "0", "99999999999999")]
         [Required(ErrorMessage = "Preencha um valor")]
         public decimal Valor { get; set; }
+
+        [DisplayName("Compra")]
         public int CompraId { get; set; }
+
+        [DisplayName("Produto")]
         public int ProdutoId { get; set; }
 
         public virtual CompraViewModel Compra { get; set; }

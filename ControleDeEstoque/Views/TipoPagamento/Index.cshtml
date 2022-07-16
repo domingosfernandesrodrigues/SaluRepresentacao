@@ -7,27 +7,37 @@
 <h2>Formas de pagamento</h2>
 
 <p>
-    @Html.ActionLink("Novo", "Create")
+    <button onclick="window.location.replace('@Url.Action("Create")')" class="btn btn-success">Novo</button>
 </p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Nome)
-        </th>
-        <th></th>
-    </tr>
+@if (Model.Any())
+{
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Nome)
+            </th>
+            <th></th>
+        </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Nome)
-        </td>
-        <td>
-            @Html.ActionLink("Editar", "Edit", new { id=item.TipoPagamentoId }) |
-            @*@Html.ActionLink("Detalhes", "Details", new { id=item.TipoPagamentoId }) |*@
-            @Html.ActionLink("Excluir", "Delete", new { id=item.TipoPagamentoId })
-        </td>
-    </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nome)
+                </td>
+                <td>
+                    @Html.ActionLink("Editar", "Edit", new { id = item.TipoPagamentoId }) |
+                    @*@Html.ActionLink("Detalhes", "Details", new { id=item.TipoPagamentoId }) |*@
+                    @Html.ActionLink("Excluir", "Delete", new { id = item.TipoPagamentoId })
+                </td>
+            </tr>
+        }
+
+    </table>
 }
-
-</table>
+else
+{
+    <div class="text-center">
+        <h4>Não há registro de Tipos de Pagamento!</h4>
+    </div>
+}

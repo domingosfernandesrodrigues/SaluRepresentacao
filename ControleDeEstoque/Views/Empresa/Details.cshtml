@@ -1,0 +1,140 @@
+﻿@model ControleDeEstoque.ViewModels.EmpresaViewModel
+
+@{
+    ViewBag.Title = "Empresa";
+}
+
+<div>
+    <h2>Informações da Empresa</h2>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.DataAbertura)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DataAbertura)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NomeFantasia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NomeFantasia)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.cnpj)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cnpj)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.razaoSocial)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.razaoSocial)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NaturezaJuridica)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NaturezaJuridica)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CEP)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CEP)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Endereco)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Endereco)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Bairro)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Bairro)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Fone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Fone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Celular)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Celular)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EndNumero)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EndNumero)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Cidade)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cidade)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Estado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Estado)
+        </dd>
+
+    </dl>
+</div>
+<div class="col-md-12 form-group">
+    <div class="col-md-4 pull-left">
+        @Html.ActionLink("Voltar", "Index")
+    </div>
+    <div class="col-md-4 pull-right">
+        @Html.ActionLink("Editar", "Edit", new { id = Model.EmpresaId })
+    </div>
+</div>

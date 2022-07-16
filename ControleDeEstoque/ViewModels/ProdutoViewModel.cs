@@ -37,9 +37,6 @@ namespace ControleDeEstoque.ViewModels
         [DisplayName("Valor Venda")]
         public decimal ValorVenda { get; set; }
 
-        [DisplayName("Quantidade")]
-        public double Qtde { get; set; }
-
         [DisplayName("Unidade de Medida")]
         public int UnidadeMedidaId { get; set; }
 

@@ -1,5 +1,7 @@
 ﻿@model ControleDeEstoque.ViewModels.CategoriaViewModel
-
+@{
+    ViewBag.Title = "Categoria";
+}
 <div>
     <h4>CategoriaViewModel</h4>
     <hr />
@@ -7,7 +9,7 @@
         <dt>
             @Html.DisplayNameFor(model => model.Nome)
         </dt>
-        
+
         <dd>
             @Html.DisplayFor(model => model.Nome)
         </dd>

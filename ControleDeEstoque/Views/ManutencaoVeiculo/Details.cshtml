@@ -1,0 +1,58 @@
+﻿@model ControleDeEstoque.ViewModels.ManutencaoVeiculoViewModel
+
+@{
+    ViewBag.Title = "Manutenção";
+}
+
+<div>
+    <h2>Informações da Manutenção do Veículo</h2>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.VeiculoId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Veiculo.Modelo)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Servico)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Servico)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Valor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Valor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Descricao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Descricao)
+        </dd>
+
+
+
+    </dl>
+</div>
+<div class="col-md-12 form-group">
+    <div class="form-group col-md-4 pull-left">
+        <p>
+            @Html.ActionLink("Voltar", "Index")
+        </p>
+    </div>
+    <div class="form-group col-md-4 pull-right">
+        <p>
+            @Html.ActionLink("Editar", "Edit", new { id = Model.ManutencaoVeiculoId })
+
+        </p>
+    </div>
+</div>

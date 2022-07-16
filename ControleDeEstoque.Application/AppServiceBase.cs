@@ -3,8 +3,10 @@ using ControleDeEstoque.Domain.Interfaces.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
+//using System.AutoMapper;
 
 namespace ControleDeEstoque.Application
 {
@@ -36,6 +38,14 @@ namespace ControleDeEstoque.Application
         {
             return _serviceBase.GetById(id);
         }
+
+        //public IEnumerable<TEntity> ObterTodos(Expression<Func<TEntity, bool>> expression, params Expression<Func<TEntity, object>>[] includes)
+        //{
+        //    var result = _serviceBase.ObterTodos(
+        //        Mapper.Map<Expression<Func<TEntity, bool>>>(expression),
+        //        Mapper.Map<Expression<Func<TEntity, object>>[]>(includes));
+        //    return Mapper.Map<IEnumerable<TEntity>>(result);
+        //}
 
         public void Remove(TEntity obj)
         {

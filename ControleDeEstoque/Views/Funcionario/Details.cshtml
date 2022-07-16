@@ -1,0 +1,147 @@
+﻿@model ControleDeEstoque.ViewModels.FuncionarioViewModel
+
+@{
+    ViewBag.Title = "Funcionário";
+}
+<div class="row form-group">
+    <h2>Informações do Funcionário</h2>
+    <hr />
+    <form class="form-horizontal">
+        <div class="row">
+
+            <div class="col-lg-4">
+                @Html.LabelFor(model => model.Nome)
+                <span class="form-control">@Html.DisplayFor(model => model.Nome)</span>
+            </div>
+
+            <div class="col-lg-6">
+                @Html.LabelFor(model => model.Sobrenome)
+                <span class="form-control">@Html.DisplayFor(model => model.Sobrenome)</span>
+            </div>
+
+            <div class="col-lg-2">
+                @Html.LabelFor(model => model.DtNascimento)
+                <span class="form-control">@Html.DisplayFor(model => model.DtNascimento)</span>
+            </div>
+
+            <div class="col-lg-6">
+                @Html.LabelFor(model => model.NomePai)
+                <span class="form-control">@Html.DisplayFor(model => model.NomePai)</span>
+            </div>
+
+            <div class="col-lg-6">
+                @Html.LabelFor(model => model.NomeMae)
+                <span class="form-control">@Html.DisplayFor(model => model.NomeMae)</span>
+            </div>
+
+            <div class="col-lg-3">
+                @Html.LabelFor(model => model.CPF)
+                <span class="form-control">@Html.DisplayFor(model => model.CPF)</span>
+            </div>
+
+            <div class="col-lg-3">
+                @Html.LabelFor(model => model.RG)
+                <span class="form-control">@Html.DisplayFor(model => model.RG)</span>
+            </div>
+
+            <div class="col-lg-3">
+                @Html.LabelFor(model => model.Nacionalidade)
+                <span class="form-control">@Html.DisplayFor(model => model.Nacionalidade)</span>
+            </div>
+
+            <div class="col-lg-3">
+                @Html.LabelFor(model => model.Naturalidade)
+                <span class="form-control">@Html.DisplayFor(model => model.Naturalidade)</span>
+            </div>
+
+            <div class="col-lg-3">
+                @Html.LabelFor(model => model.PIS_PASEP)
+                <span class="form-control">@Html.DisplayFor(model => model.PIS_PASEP)</span>
+            </div>
+
+            <div class="col-lg-2">
+                @Html.LabelFor(model => model.CarteiraTrabalhoNumero)
+                <span class="form-control">@Html.DisplayFor(model => model.CarteiraTrabalhoNumero)</span>
+            </div>
+
+            <div class="col-lg-2">
+                @Html.LabelFor(model => model.CarteiraTrabalhoSerie)
+                <span class="form-control">@Html.DisplayFor(model => model.CarteiraTrabalhoSerie)</span>
+            </div>
+
+            <div class="col-lg-2">
+                @Html.LabelFor(model => model.CarteiraTrabalhoUF)
+                <span class="form-control">@Html.DisplayFor(model => model.CarteiraTrabalhoUF)</span>
+            </div>
+
+            <div class="col-lg-3">
+                @Html.LabelFor(model => model.Remuneracao)
+                <span class="form-control">@Html.DisplayFor(model => model.Remuneracao)</span>
+            </div>
+
+            <div class="col-lg-2">
+                @Html.LabelFor(model => model.CEP)
+                <span class="form-control">@Html.DisplayFor(model => model.CEP)</span>
+            </div>
+
+            <div class="col-lg-6">
+                @Html.LabelFor(model => model.Endereco)
+                <span class="form-control">@Html.DisplayFor(model => model.Endereco)</span>
+            </div>
+
+            <div class="col-lg-4">
+                @Html.LabelFor(model => model.Bairro)
+                <span class="form-control">@Html.DisplayFor(model => model.Bairro)</span>
+            </div>
+
+            <div class="col-lg-3">
+                @Html.LabelFor(model => model.Fone)
+                <span class="form-control">@Html.DisplayFor(model => model.Fone)</span>
+            </div>
+
+            <div class="col-lg-3">
+                @Html.LabelFor(model => model.Celular)
+                <span class="form-control">@Html.DisplayFor(model => model.Celular)</span>
+            </div>
+
+            <div class="col-lg-4">
+                @Html.LabelFor(model => model.Email)
+                <span class="form-control">@Html.DisplayFor(model => model.Email)</span>
+            </div>
+
+            <div class="col-lg-2">
+                @Html.LabelFor(model => model.EndNumero)
+                <span class="form-control">@Html.DisplayFor(model => model.EndNumero)</span>
+            </div>
+
+            <div class="col-lg-3">
+                @Html.LabelFor(model => model.Estado)
+                <span class="form-control">@Html.DisplayFor(model => model.Estado)</span>
+            </div>
+
+            <div class="col-lg-3">
+                @Html.LabelFor(model => model.Cidade)
+                <span class="form-control">@Html.DisplayFor(model => model.Cidade)</span>
+            </div>
+
+            <div class="col-lg-3">
+                @Html.LabelFor(model => model.CargoId)
+                <span class="form-control">@Html.DisplayFor(model => model.Cargo.Nome)</span>
+            </div>
+
+            <div class="col-lg-3">
+                @Html.LabelFor(model => model.DtAdmissao)
+                <span class="form-control">@Html.DisplayFor(model => model.DtAdmissao)</span>
+            </div>
+
+        </div>
+    </form>
+</div>
+<br />
+<div class="col-md-12 form-group">
+    @Html.ActionLink("Voltar", "Index") |
+    @Html.ActionLink("Editar", "Edit", new { id = Model.FuncionarioId })
+</div>
+<br />
+
+

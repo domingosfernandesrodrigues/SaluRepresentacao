@@ -1,0 +1,42 @@
+﻿@model ControleDeEstoque.ViewModels.CargoViewModel
+
+@{
+    ViewBag.Title = "Cargo";
+}
+
+<div>
+    <h2>Excluir Cargo</h2>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Ativo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ativo)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="col-md-12 form-group">
+            <div class="pull-left col-md-4 ">
+                @Html.ActionLink("Voltar", "Index") 
+            </div>
+            <div class="pull-right col-md-4 ">
+                <input type="submit" value="Excluir" class="btn btn-danger" />
+            </div>
+        </div>
+    }
+</div>

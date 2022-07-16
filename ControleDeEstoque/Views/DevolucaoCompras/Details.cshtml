@@ -1,0 +1,34 @@
+﻿@model ControleDeEstoque.ViewModels.DevolucaoComprasViewModel
+
+@{
+    ViewBag.Title = "Devolução";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>DevolucaoComprasViewModel</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TotalCompra)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TotalCompra)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CompraId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CompraId)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.DevolucaoCompraId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

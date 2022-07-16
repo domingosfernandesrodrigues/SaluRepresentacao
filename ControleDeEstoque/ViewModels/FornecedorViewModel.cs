@@ -25,6 +25,7 @@ namespace ControleDeEstoque.ViewModels
         [Required(ErrorMessage = "Preencha o campo Razão Social")]
         [MaxLength(150, ErrorMessage = "Máximo {0} caracteres")]
         [MinLength(2, ErrorMessage = "Mínimo {0} caracteres ")]
+        [DisplayName("Razão Social")]
         public string RazaoSocial { get; set; }
 
         [Required(ErrorMessage = "Preencha o campo CPF/CNPJ!")]

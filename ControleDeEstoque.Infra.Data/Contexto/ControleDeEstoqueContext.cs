@@ -17,13 +17,10 @@ namespace ControleDeEstoque.Infra.Data.Contexto
         {
 
         }
-
         public DbSet<Fornecedor> Fornecedor { get; set; }
         public DbSet<Compra> Compra { get; set; }
-        public DbSet<TipoPagamento> TipoPagamento { get; set; }
-        public DbSet<ParcelasCompra> ParcelasCompra { get; set; }
-        public DbSet<Venda> Venda { get; set; }
-        public DbSet<ParcelasVenda> ParcelasVenda { get; set; }
+        public DbSet<TipoPagamento> TipoPagamento { get; set; }        
+        public DbSet<Venda> Venda { get; set; }        
         public DbSet<Cliente> Cliente { get; set; }
         public DbSet<Categoria> Categoria { get; set; }
         public DbSet<UnidadeMedida> UnidadeMedida { get; set; }
@@ -31,6 +28,14 @@ namespace ControleDeEstoque.Infra.Data.Contexto
         public DbSet<Produto> Produto { get; set; }
         public DbSet<ItensVenda> ItensVenda { get; set; }
         public DbSet<ItensCompra> ItensCompra { get; set; }
+        public DbSet<Funcionario> Funcionario { get; set; }
+        public DbSet<Cargo> Cargo { get; set; }
+        public DbSet<Remuneracao> Remuneracao { get; set; }
+        public DbSet<Alimentacao> Alimentacao { get; set; }
+        public DbSet<Empresa> Empresa { get; set; }
+        public DbSet<Veiculo> Veiculo { get; set; }
+        public DbSet<ManutencaoVeiculo> ManutencaoVeiculo { get; set; }
+        public DbSet<DevolucaoCompras> DevolucaoCompras { get; set; }
 
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
@@ -51,10 +56,8 @@ namespace ControleDeEstoque.Infra.Data.Contexto
 
             modelBuilder.Configurations.Add(new FornecedorConfiguration());
             modelBuilder.Configurations.Add(new CompraConfiguration());
-            modelBuilder.Configurations.Add(new TipoPagamentoConfiguration());
-            modelBuilder.Configurations.Add(new ParcelasCompraConfiguration());
-            modelBuilder.Configurations.Add(new VendaConfiguration());
-            modelBuilder.Configurations.Add(new ParcelasVendaConfiguration());
+            modelBuilder.Configurations.Add(new TipoPagamentoConfiguration());            
+            modelBuilder.Configurations.Add(new VendaConfiguration());            
             modelBuilder.Configurations.Add(new ClienteConfiguration());
             modelBuilder.Configurations.Add(new CategoriaConfiguration());
             modelBuilder.Configurations.Add(new UnidadeMedidaConfiguration());
@@ -62,6 +65,14 @@ namespace ControleDeEstoque.Infra.Data.Contexto
             modelBuilder.Configurations.Add(new ProdutoConfiguration());
             modelBuilder.Configurations.Add(new ItensVendaConfiguration());
             modelBuilder.Configurations.Add(new ItensCompraConfiguration());
+            modelBuilder.Configurations.Add(new FuncionarioConfiguration());
+            modelBuilder.Configurations.Add(new CargoConfiguration());
+            modelBuilder.Configurations.Add(new RemuneracaoConfiguration());
+            modelBuilder.Configurations.Add(new AlimentacaoConfiguration());
+            modelBuilder.Configurations.Add(new EmpresaConfiguration());
+            modelBuilder.Configurations.Add(new VeiculoConfiguration());
+            modelBuilder.Configurations.Add(new ManutencaoVeiculoConfiguration());
+            modelBuilder.Configurations.Add(new DevolucaoComprasConfiguration());
             
         }
         public override int SaveChanges()

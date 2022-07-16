@@ -1,75 +1,59 @@
 ﻿@model IEnumerable<ControleDeEstoque.ViewModels.ProdutoViewModel>
-
-<p>
-    @Html.ActionLink("Novo", "Create")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Nome)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Descricao)
-        </th>
-        @*<th>
-            @Html.DisplayNameFor(model => model.Foto)
-        </th>*@
-        <th>
-            @Html.DisplayNameFor(model => model.ValorPago)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.ValorVenda)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Qtde)
-        </th>
-        @*<th>
-            @Html.DisplayNameFor(model => model.UnidadeMedidaId)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.CategoriaId)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.SubCategoriaId)
-        </th>*@
-        <th></th>
-    </tr>
-
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Nome)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Descricao)
-        </td>
-        @*<td>
-            @Html.DisplayFor(modelItem => item.Foto)
-        </td>*@
-        <td>
-            @Html.DisplayFor(modelItem => item.ValorPago)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.ValorVenda)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Qtde)
-        </td>
-        @*<td>
-            @Html.DisplayFor(modelItem => item.UnidadeMedida.Nome)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Categoria.Nome)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.SubCategoria.Nome)
-        </td>*@
-        <td>
-            @Html.ActionLink("Editar", "Edit", new { id=item.ProdutoId }) |
-            @Html.ActionLink("Detalhes", "Details", new { id=item.ProdutoId }) |
-            @Html.ActionLink("Excluir", "Delete", new { id=item.ProdutoId })
-        </td>
-    </tr>
+@{
+    ViewBag.Title = "Produto";
 }
 
-</table>
+<h2>Produtos</h2>
+
+<p>
+    <button onclick="window.location.replace('@Url.Action("Create")')" class="btn btn-success">Novo</button>
+</p>
+@if (Model.Any())
+{
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Nome)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Descricao)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ValorPago)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ValorVenda)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nome)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Descricao)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ValorPago)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ValorVenda)
+                </td>
+                <td>
+                    @Html.ActionLink("Editar", "Edit", new { id = item.ProdutoId }) |
+                    @Html.ActionLink("Detalhes", "Details", new { id = item.ProdutoId }) |
+                    @Html.ActionLink("Excluir", "Delete", new { id = item.ProdutoId })
+                </td>
+            </tr>
+        }
+    </table>
+}
+else
+{
+    <div class="text-center">
+        <h4>Não há registro de Produtos!</h4>
+    </div>
+}

@@ -17,10 +17,14 @@ namespace ControleDeEstoque.Infra.Data.EntityConfig
             HasRequired(p => p.TipoPagamento)
                 .WithMany()
                 .HasForeignKey(p => p.TipoPagamentoId);
-            
-            //HasRequired(p => p.Cliente)
-            //    .WithMany()
-            //    .HasForeignKey(p => p.ClienteId);
+
+            HasRequired(p => p.Cliente)
+                .WithMany()
+                .HasForeignKey(p => p.ClienteId);
+
+            HasRequired(p => p.Funcionario)
+                .WithMany()
+                .HasForeignKey(p => p.FuncionarioId);
         }
     }
 }

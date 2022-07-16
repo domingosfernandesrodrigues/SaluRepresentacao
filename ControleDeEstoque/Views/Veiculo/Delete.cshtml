@@ -1,0 +1,45 @@
+﻿@model ControleDeEstoque.ViewModels.VeiculoViewModel
+
+@{
+    ViewBag.Title = "Veículo";
+}
+
+<div>
+    <h2>Excluir Veículo</h2>
+    <hr />
+    @Html.HiddenFor(model => model.VeiculoId)
+    <form class="form-horizontal">
+        <div class="row">
+            <div class="col-lg-1">
+                @Html.LabelFor(model => model.Ativo)
+                <span class="form-control">@Html.DisplayFor(model => model.Ativo)</span>
+            </div>
+            <div class="col-lg-6">
+                @Html.LabelFor(model => model.Modelo)
+                <span class="form-control">@Html.DisplayFor(model => model.Modelo)</span>
+            </div>
+            <div class="col-lg-5">
+                @Html.LabelFor(model => model.Marca)
+                <span class="form-control">@Html.DisplayFor(model => model.Marca)</span>
+            </div>
+            <div class="col-lg-6">
+                @Html.LabelFor(model => model.Placa)
+                <span class="form-control">@Html.DisplayFor(model => model.Placa)</span>
+            </div>
+            <div class="col-lg-6">
+                @Html.LabelFor(model => model.Cor)
+                <span class="form-control">@Html.DisplayFor(model => model.Cor)</span>
+            </div>
+        </div>
+    </form>
+    <br />
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="col-md-12 form-group">
+            @Html.ActionLink("Voltar", "Index") |
+            <input type="submit" value="Excluir" class="btn btn-danger" />
+        </div>
+    }
+</div>

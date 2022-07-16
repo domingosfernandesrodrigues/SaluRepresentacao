@@ -1,0 +1,62 @@
+﻿@model IEnumerable<ControleDeEstoque.ViewModels.AlimentacaoViewModel>
+
+@{
+    ViewBag.Title = "Alimentação";
+}
+
+<h2>Alimentações</h2>
+<hr />
+<p>
+    <button onclick="window.location.replace('@Url.Action("Create")')" class="btn btn-success">Novo</button>
+</p>
+@if (Model.Any())
+{
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.FuncionarioId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TipoAlimentacao)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Valor)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Qtd)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Funcionario.Nome)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TipoAlimentacao)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Valor)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Qtd)
+                </td>
+
+                <td>
+                    @Html.ActionLink("Editar", "Edit", new { id = item.AlimentacaoId }) |
+                    @Html.ActionLink("Detalhes", "Details", new { id = item.AlimentacaoId }) |
+                    @Html.ActionLink("Excluir", "Delete", new { id = item.AlimentacaoId })
+                </td>
+            </tr>
+        }
+
+    </table>
+}
+else
+{
+    <div class="text-center">
+        <h4>Não há registro de Alimentação!</h4>
+    </div>
+}

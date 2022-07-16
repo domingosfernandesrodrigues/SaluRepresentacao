@@ -7,7 +7,7 @@
     
 <fieldset>
     <div class="form-horizontal">
-        <h4>Editar produto</h4>
+        <h2>Editar produto</h2>
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         @Html.HiddenFor(model => model.ProdutoId)
@@ -53,14 +53,6 @@
         </div>
 
         <div class="col-md-6 form-group">
-            @Html.LabelFor(model => model.Qtde)
-            <div>
-                @Html.EditorFor(model => model.Qtde, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.Qtde, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="col-md-6 form-group">
             @Html.LabelFor(model => model.UnidadeMedidaId)
             <div>
                 @Html.DropDownListFor(model => model.UnidadeMedidaId, ViewBag.UnidadeMedida as SelectList, "Selecione...", new { @class = "form-control" } )
@@ -84,18 +76,19 @@
             </div>
         </div>
 
-        <div class="col-md-12 form-group pull-right">
-            <div class="col-md-offset-7">
-                <input type="submit" value="Editar" class="btn btn-default" />
+        <div class="row col-md-12 form-group">
+            <div class="col-md-4  pull-left">
+                @Html.ActionLink("Voltar", "Index")
+            </div>
+            <div class="col-md-4  pull-right">
+                <input type="submit" value="Editar" class="btn btn-primary" />
             </div>
         </div>
     </div>
 </fieldset>
 }
 
-<div>
-    @Html.ActionLink("Voltar", "Index")
-</div>
+
 
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")

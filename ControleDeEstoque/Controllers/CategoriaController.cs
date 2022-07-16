@@ -15,10 +15,12 @@ namespace ControleDeEstoque.Controllers
 
         #region MAPEAMENTO
         private readonly ICategoriaAppService _categoriaAppService;
+        private readonly ISubCategoriaAppService _subCategoriaAppService;
 
-        public CategoriaController(ICategoriaAppService categoriaAppService)
+        public CategoriaController(ICategoriaAppService categoriaAppService, ISubCategoriaAppService subCategoriaAppService)
         {
             _categoriaAppService = categoriaAppService;
+            _subCategoriaAppService = subCategoriaAppService;
         }
 
         #endregion
@@ -100,7 +102,8 @@ namespace ControleDeEstoque.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            var categoria = _categoriaAppService.GetById(id);
+            var categoria = _categoriaAppService.GetById(id);            
+
             _categoriaAppService.Remove(categoria);
 
             return RedirectToAction("Index");
